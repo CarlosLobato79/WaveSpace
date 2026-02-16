@@ -157,6 +157,15 @@ body::after {
     min-width: 280px;
 }
 
+.readout--top-center {
+    top: 18px;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    transform: translateX(-50%);
+    min-width: 360px;
+}
+
 .readout .label {
     color: #a9bdd9;
     margin-right: 6px;
@@ -208,6 +217,20 @@ body::after {
     margin-bottom: 0;
 }
 
+.credit {
+    position: absolute;
+    right: 24px;
+    bottom: 24px;
+    padding: 8px 12px;
+    border: 1px solid var(--line);
+    background: rgba(7, 10, 16, 0.72);
+    backdrop-filter: blur(8px) saturate(1.1);
+    border-radius: var(--radius);
+    font-size: 11px;
+    color: #a9bdd9;
+    letter-spacing: 0.3px;
+}
+
 @media (max-width: 720px) {
     .hud {
         top: 12px;
@@ -250,11 +273,21 @@ body::after {
         min-width: 220px;
     }
 
+    .readout--top-center {
+        min-width: 260px;
+    }
+
     .instructions {
         left: 12px;
         bottom: 12px;
         max-width: 260px;
         font-size: 11px;
+    }
+
+    .credit {
+        right: 12px;
+        bottom: 12px;
+        font-size: 10px;
     }
 }
 .stop-btn {
