@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>WaveSpace // Signal Geometry</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="hud">
+    <h1>WaveSpace</h1>
+    <span>Mode: <span class="accent">Acoustic Mapping</span></span>
+    <span>Amplitude: <span id="amp">0</span></span>
+    <span>Frequency: <span id="freq">0</span> Hz</span>
+    <span>Position: <span id="pos">0.0, 0.0, 0.0</span></span>
+    <span>View: <span id="cam">0.0, 0.0, 0.0</span></span>
+    <span>Target: <span id="target">0.0, 0.0, 0.0</span></span>
+</div>
+
+<div class="controls">
+    <button id="startBtn">CAPTURAR SONIDO</button>
+    <button id="stopBtn" class="stop-btn">DETENER</button>
+    <button id="planeBtn" class="ghost-btn">MOSTRAR PLANO</button>
+</div>
+
+<div class="instructions">
+    <div class="instructions__title">Cómo usar</div>
+    <div class="instructions__item">1. Haz clic en <span class="accent">INICIAR SEÑAL</span> para habilitar el micrófono.</div>
+    <div class="instructions__item">2. Habla, aplaude o reproduce audio y observa la línea en 3D.</div>
+    <div class="instructions__item">3. Arrastra para rotar, usa la rueda para acercar, clic derecho para desplazar.</div>
+    <div class="instructions__item">4. X = tiempo, Y = amplitud, Z = frecuencia/500.</div>
+</div>
+
+<div class="readout readout--top">
+    <div><span class="label">Capture</span> <span class="value" id="time">0.0</span>s / <span class="value" id="duration">20</span>s</div>
+    <div><span class="label">Peak Amp</span> <span class="value" id="peak">0.000</span></div>
+    <div><span class="label">Avg Freq</span> <span class="value" id="avgFreq">0</span> Hz</div>
+    <div><span class="label">Status</span> <span class="value accent" id="status">Idle</span></div>
+</div>
+
+<div class="readout readout--bottom">
+    <div class="tag">Plano cartesiano: X = tiempo (s), Y = amplitud, Z = frecuencia/500</div>
+    <div class="tag">Timeline: 0s → 20s • Grid = 1s ticks</div>
+</div>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
